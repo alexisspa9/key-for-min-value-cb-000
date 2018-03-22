@@ -11,7 +11,7 @@ def key_for_min_value(name_hash)
           myhash[key] = value
         end
       end
-
+      myhash
   else
 
     return nil
