@@ -4,15 +4,15 @@
 def key_for_min_value(name_hash)
   if name_hash.length > 0
    my_value = 100000
-   mykey = ""
+   my_hash
       name_hash.collect do |key, value|
 
         if value < myvalue
           myvalue = value
-          mykey = key
+          myhash[key] = value
         end
       end
-      mykey
+      myhash
   else
 
     return nil
