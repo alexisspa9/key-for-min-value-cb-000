@@ -3,16 +3,16 @@
 
 def key_for_min_value(name_hash)
   if name_hash.length > 0
-   my_value = 100000
-   my_hash = ""
-      name_hash.collect do |mykey, value|
+   lowvalue = nil
+   lowhash = nil
+      name_hash.collect do |k, v|
 
-        if value < myvalue
-          myvalue = value
-          myhash = mykey
+        if lowvalue == nil || v < lowvalue
+          lowvalue = v
+          lowhash = k
         end
       end
-      myhash
+      lowhash
   else
 
     return nil
